@@ -1,4 +1,3 @@
 export interface iUser {
-    // [key] : any
-    any?: any;
+    [key : string] : any
 }

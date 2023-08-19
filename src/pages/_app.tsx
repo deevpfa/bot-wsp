@@ -14,6 +14,8 @@ import { ThemeProvider } from '@material-tailwind/react'
 import { THEME } from '../styles/ThemeProvider'
 import { AuthProvider } from '../store/useAuth'
 import { ProtectRoute } from '../common/ProtectRoute'
+import { Paths } from '@/constants/Paths'
+import { ToastContainer } from 'react-toastify'
 
 const userLocale = getUserLocales();
 
@@ -30,18 +32,14 @@ i18next.init({
 
 export default function App({ Component, pageProps }: AppProps) {
   // check if the page have layout
-  const path = useRouter().pathname.split('/')
-  // pages that have layout
-  const haveLayout : any = []
+  const router = useRouter()
+  const path =  "/" + router.pathname.split("/")[1];
+  const withLayout = [Paths.dashboard , Paths.templates, Paths.interactions, Paths.account];
+	const haveLayout = withLayout.includes(path);
 
   useEffect(() => {
-    // if the page have layout, then add the class to body
-    if (haveLayout.includes(path[1])) {
-      document.body.classList.add('h-full', 'bg-gray-100')
-    } else {
-      document.body.classList.remove('h-full', 'bg-gray-100')
-    }
-  })
+		haveLayout ? document.body.classList.add("h-full", "bg-gray") : document.body.classList.remove("h-full", "bg-gray");
+	}, [haveLayout]);
 
 
   return (
@@ -51,15 +49,18 @@ export default function App({ Component, pageProps }: AppProps) {
         <AuthProvider>
           <ProtectRoute>
               <ThemeProvider value={THEME}>
-                {haveLayout.includes(path[1]) ? <Layout><Component {...pageProps} /></Layout> : <Component {...pageProps} />}
+              <ToastContainer hideProgressBar={true} position="top-center" autoClose={1000} limit={2} theme="light" closeOnClick={true} />
+								{/* <NextProgressBar color="#eb1034" height={2} options={{showSpinner : false}}/> */}
+								{haveLayout ? (
+									<Layout>
+										<Component {...pageProps} />
+									</Layout>
+								) : (
+									<Component {...pageProps} />
+								)}
               </ThemeProvider>
           </ProtectRoute>
         </AuthProvider>
       </I18nextProvider>
     </>)
 }
-
-// how to use translation system
-// import { useTranslation } from 'react-i18next'
-// const {t} = useTranslation('global')
-//<h1>{t("login.hello-world")}</h1>

@@ -6,11 +6,11 @@ export const HeadComponent: FC<{title:string | null}> = ({ title }) => {
     return (
         <>
             <Head>
-                <title>{title || 'Fulldata | Inteligencia en Datos'}</title>
+                <title>{title || 'Sercom'}</title>
                 <meta name="author" content="" />
-                <link rel="shortcut icon" href='/logo-icon.svg' />
+                <link rel="shortcut icon" href='/logo-header.jpeg' />
                 <meta name="description" content="" />
-                <meta name="keywords" content="fulldata, inteligencia en datos, nosis, veraz, agildata" />
+                <meta name="keywords" content="sercom" />
             </Head>
         </>
     )

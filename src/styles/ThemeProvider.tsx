@@ -1,4 +1,3 @@
-
 import {
 	ButtonStyleTypes,
 	// DrawerStylesType,
@@ -14,7 +13,7 @@ import {
 
 const ButtonStyles: ButtonStyleTypes | IconButtonStyleTypes = {
 	defaultProps: {
-		color: "secondary" as any,
+		color: "primary" as any,
 	},
 	valid: {
 		colors: ["primary", "secondary"],
@@ -70,10 +69,10 @@ export const THEME = {
 	iconButton: ButtonStyles as IconButtonStyleTypes,
 	buttonGroup: {
 		defaultProps: {
-			color: "secondary" as any,
+			// color: "secondary" as any,
 		},
 		valid: {
-			colors: ["primary", "secondary"],
+			// colors: ["primary", "secondary"],
 		},
 		styles: {
 			base: {
