@@ -1,0 +1,49 @@
+{
+    "global":{
+        "full-data-pro":"Full Data Pro",
+        "goodMorning":"Good Morning",
+        "dashboard":"Dashboard",
+        "services":"Services",
+        "people":"People",
+        "companies":"Companies",
+        "vehicles":"Vehicles",
+        "phones":"Phones",
+        "settings":"Settings",
+        "help":"Help",
+        "privacy":"Privacy",
+        "your-profile":"Your Profile",
+        "logout":"Logout",
+        "account":"Account",
+        "selectOption":"Select Option"
+    },
+    "login":{
+        "error":"Invalid email or password",
+        "or":"or",
+        "sign-in-to-account":"Sign in to your account",
+        "start-free-trial":"start your 14-day free trial",
+        "email-address":"Email Address",
+        "remember-me":"Remember me",
+        "forgot-password":"Forgot Password?",
+        "sign-in":"Sign In"
+    },
+    "layout":{
+        "available-credits":"Available Credits",
+        "buy-credits":"Buy Credits"
+    },
+    "dashboard":{
+        "dashboard":"Dashboard",
+        "seeHistory":"See History",
+        "newSearch":"New Search",
+        "people-description":"Search for a person by first name, last name, address, phone number, identification number, social security number, driver's license number",
+        "companies-description":"Search for a business by name, address, phone number, identification number, social security number, driver's license number",
+        "vehicles-description":"Search for a vehicle by license plate number, VIN number, identification number, social security number, driver's license number",
+        "phones-description":"Search for a phone by phone number, identification number, social security number, driver's license number"
+    },
+    "transactions":{
+        "transactions":"Transactions",
+        "people-transactions-title":"People Searches",
+        "companies-transactions-title":"Companies Searches",
+        "vehicles-transactions-title":"Vehicles Searches",
+        "phones-transactions-title":"Phones Searches"
+    }
+}

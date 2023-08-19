@@ -1,0 +1,54 @@
+{
+    "global":{
+        "full-data-pro":"Full Data Pro",
+        "goodMorning":"Buenos días",
+        "dashboard":"Dashboard",
+        "services":"Servicios",
+        "people":"Personas",
+        "companies":"Empresas",
+        "vehicles":"Vehículos",
+        "phones":"Teléfonos",
+        "settings":"Settings",
+        "help":"Help",
+        "privacy":"Privacy",
+        "your-profile":"Tu perfil",
+        "account":"Cuenta",
+        "logout":"Cerrar sesión",
+        "selectOption":"Seleccione una opción"
+    },
+    "login":{
+        "error":"Email o password incorrecto",
+        "or":"o",
+        "sign-in-to-account":"Ingresar a mi cuenta",
+        "start-free-trial":"comience su prueba gratuita de 14 días",
+        "email-address":"Email",
+        "remember-me":"Recuérdame",
+        "forgot-password":"¿Olvidaste tu contraseña?",
+        "sign-in":"Iniciar sesión"
+    },
+    "layout":{
+        "available-credits":"Créditos disponibles",
+        "buy-credits":"Comprar créditos"
+    },
+    "dashboard":{
+        "dashboard":"Dashboard",
+        "seeHistory":"Ver Historial",
+        "newSearch":"Nueva Búsqueda",
+        "people-description":"Busque a una persona por nombre, apellido, dirección, número de teléfono, número de identificación, número de seguro social, número de licencia de conducir",
+        "companies-description":"Busque una empresa por nombre, dirección, número de teléfono, número de identificación, número de seguro social, número de licencia de conducir",
+        "vehicles-description":"Busque un vehículo por número de placa, número de identificación, número de seguro social, número de licencia de conducir",
+        "phones-description":"Busque un teléfono por número de teléfono, número de identificación, número de seguro social, número de licencia de conducir"
+    },
+    "transactions":{
+        "transactions":"Transacciones",
+        "date":"Fecha",
+        "description":"Descripción",
+        "amount":"Monto",
+        "credits":"Créditos",
+        "no-records":"No hay registros",
+        "people-transactions-title":"Busquedas de Personas",
+        "companies-transactions-title":"Busquedas de Empresas",
+        "vehicles-transactions-title":"Busquedas de Vehículos",
+        "phones-transactions-title":"Busquedas de Teléfonos"
+    }
+}
