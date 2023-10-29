@@ -121,7 +121,7 @@ export const TextField = ({
 				<div className="text-field">
 					<div className="relative flex items-stretch">
 						{before ? before : null}
-						{leading ? <div className="flex items-center rounded-md border border-r-0 border-blue-gray-200">{leading}</div> : null}
+						{leading ? <div className="flex items-center rounded-md border border-r-0 border-white">{leading}</div> : null}
 						<Input
 							className={cn.join(" ")}
 							name={name}
@@ -134,7 +134,7 @@ export const TextField = ({
 							{...restProps}
 						/>
 						{after ? after : null}
-						{trailing ? <div className="flex items-center h-full rounded-md border border-l-0 border-blue-gray-200 ">{trailing}</div> : null}
+						{trailing ? <div className="flex items-center h-full rounded-md border border-l-0 border-white ">{trailing}</div> : null}
 					</div>
 					{hasFeedback && input.isTouched && input.isDirty && !!input.error && input.status === "invalid" && errorTip && (
 						<Typography variant="small" className="ml-0.5 mt-0.5 absolute text-red-600">

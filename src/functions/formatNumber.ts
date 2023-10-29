@@ -1,4 +1,4 @@
-export const formatNumber = (value: string | number, locale: string | string[] = "en-US", digitFormat: string = "1.0-0") => {
+export const formatNumber = (value: string | number, locale: string | string[] = "es-AR", digitFormat: string = "1.0-0") => {
 	if (typeof value === "string") value = Number(value);
 
 	const [minIntDig, fracDig] = digitFormat.split(".");
