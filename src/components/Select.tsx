@@ -10,7 +10,7 @@ interface iProps {
 	label?: string;
 	onSelect?: (e: any) => any;
 	title?: any;
-	value: any;
+	value?: any;
 	image?: string;
 	placeholder?: string;
 	error?: boolean;
@@ -34,12 +34,12 @@ export default function Select({ selectItems, label, image, title, placeholder, 
 				<>
 					{title && (
 						<>
-							<Listbox.Label className="block text-sm font-medium text-gray-700">{title}</Listbox.Label>
+							<Listbox.Label className="mb-1 block text-sm font-medium text-gray-700">{title}</Listbox.Label>
 						</>
 					)}
-					<div className="relative mt-1">
+					<div className="relative">
 						<Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
-							<span className="flex items-center">
+							<span className="flex items-center ">
 								{selected && (
 									<>
 										{image && (
@@ -52,7 +52,7 @@ export default function Select({ selectItems, label, image, title, placeholder, 
 								)}
 								{!selected && (
 									<div>
-										<span className="ml-3 block truncate">{placeholder ? placeholder : t("global.selectOption")}</span>
+										<span className="block truncate">{placeholder ? placeholder : t("global.selectOption")}</span>
 									</div>
 								)}
 							</span>

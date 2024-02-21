@@ -1,5 +1,9 @@
 export const Paths = {
 	home: "/",
-	form: "/form",
-	how: "/how",
+	login: "/login",
+	signup: "/signup",
+	dashboard: "/dashboard",
+	templates: "/templates",
+	account: "/account",
+	interactions: "/interactions",
 }

@@ -1,10 +1,11 @@
+import { classNames } from "@/functions/classNames";
 import { useTranslation } from "react-i18next";
 
-export default function LoadingPage() {
+export default function LoadingPage({ fullScreen }: { fullScreen?: boolean }) {
 	const { t } = useTranslation("global");
 
 	return (
-		<div className="flex justify-center items-center flex-col min-h-screen">
+		<div className={classNames("flex justify-center items-center flex-col", fullScreen ? 'min-h-screen' : '')}>
 			<div className="relative flex items-center">
 				<svg className="text-blue-gray-100 animate-spin w-24 h-24 mb-2" viewBox="0 0 64 64" fill="#ffff" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
 					<path

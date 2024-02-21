@@ -6,11 +6,11 @@ export const HeadComponent: FC<{title:string | null}> = ({ title }) => {
     return (
         <>
             <Head>
-                <title>{title || 'Elecciones 2023'}</title>
+                <title>{title || 'WP-SENDER'}</title>
                 <meta name="author" content="" />
-                <link rel="shortcut icon" href='images/mapa.png' />
+                <link rel="shortcut icon" href='images/icon.jpeg' />
                 <meta name="description" content="" />
-                <meta name="keywords" content="Elecciones 2023" />
+                <meta name="keywords" content="WP-SENDER" />
             </Head>
         </>
     )

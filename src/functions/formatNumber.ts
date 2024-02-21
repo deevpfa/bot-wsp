@@ -1,4 +1,5 @@
-export const formatNumber = (value: string | number, locale: string | string[] = "es-AR", digitFormat: string = "1.0-0") => {
+export const formatNumber = (value: string | number, locale: string | string[] = "es-AR", digitFormat: `${number}.${number}-${number}` = "1.0-0") => {
+	if (!value) return "";
 	if (typeof value === "string") value = Number(value);
 
 	const [minIntDig, fracDig] = digitFormat.split(".");
@@ -16,4 +17,16 @@ export const formatNumber = (value: string | number, locale: string | string[] =
 		minimumFractionDigits: Number(minFracDig),
 		maximumFractionDigits: Number(maxFracDig),
 	}).format(value);
+};
+
+export const getIntegerSeparetor = (locale: string = "es-AR") => {
+	const number = formatNumber(1000, locale);
+	const separetor = number.slice(1, 2);
+	return separetor;
+};
+
+export const getFractionSeparetor = (locale: string = "es-AR") => {
+	const number = formatNumber(1.1, locale, "1.1-1");
+	const decimal = number.slice(1, 2);
+	return decimal;
 };
