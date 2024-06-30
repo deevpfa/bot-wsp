@@ -1,6 +1,6 @@
 import { FC, Fragment, PropsWithChildren, useState } from "react";
 import Image from "next/image";
-import LogoHeader from "../../../public/images/logo-header.svg";
+import LogoHeader from "../../../public/images/IsoSinFondo.png";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import empty from "../../../public/images/empty.jpg";
 import { Bars3BottomLeftIcon, XMarkIcon, ChevronDownIcon } from "@heroicons/react/24/outline";

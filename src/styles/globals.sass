@@ -13,8 +13,9 @@ body
 	margin: 0
 	font-feature-settings: "cv02", "cv03", "cv04", "cv11"
 
-$primary: #837250
-$secondary: #171a28
+$primary: #DA465A
+$secondary: #E6E4E4
+$third: #EA6857
 
 $success: #50cd89
 $danger: #dc3545
@@ -25,7 +26,7 @@ button
 	text-transform: unset !important
 
 input:focus
-	box-shadow : none !important
+	box-shadow: none !important
 	visi
 
 .btn-primary
@@ -37,7 +38,6 @@ input:focus
 	cursor: pointer
 	&:hover
 		background-color: darken($primary, 10%)
-
 
 .btn-secondary
 	background-color: $secondary
@@ -56,7 +56,6 @@ input:focus
 	cursor: pointer
 	&:hover
 		background-color: darken($success, 10%)
-
 
 .animate-spin
 	animation: spin 1s linear infinite
@@ -87,7 +86,7 @@ input:focus
 
 .bg-primary
 	background-color: $primary
-	
+
 .bg-secondary
 	background-color: $secondary
 
@@ -118,10 +117,38 @@ input:focus
 .bg-purple
 	background-color: #7239ea
 
-
 p
 	color: #a19e9e
 
 .text-sm
 	// line-height: 1.25rem
 	font-size: 0.915rem
+
+.bg-gradient-text
+	background-image: linear-gradient(276deg, $primary 9.65%, $secondary 94.36%)
+
+.bot-bg
+	background-image: url('/images/bot-bg.avif')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+.background-image
+	position: relative
+	width: 100%
+	height: 100vh
+	overflow: hidden
+
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-image: url('/images/bot-bg.avif')
+		background-size: cover
+		background-position: center
+		opacity: 0.15
+		background-color: black
+		z-index: 2

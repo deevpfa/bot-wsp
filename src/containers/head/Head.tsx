@@ -1,16 +1,14 @@
 import Head from "next/head";
 import { FC } from "react";
-import logo from '../../../public/favicon.ico'
 
 export const HeadComponent: FC<{ title: string | null }> = ({ title }) => {
     return (
         <>
             <Head>
-                <title>{title || 'WP-SENDER'}</title>
+                <title>{title || 'Demesc'}</title>
                 <meta name="author" content="" />
-                <link rel="shortcut icon" href='images/icon.jpeg' />
+                <link rel="shortcut icon" href='images/IsoSinFondo.png' />
                 <meta name="description" content="" />
-                {/* <meta name="keywords" content="WP-SENDER" /> */}
             </Head>
         </>
     )
