@@ -12,18 +12,11 @@ export default function Home() {
   return (
     <div className='bg-black'>
       <section className="relative bg-black overflow-hidden">
-        <nav className="relative z-10 px-12 py-5">
+        <nav className="relative z-10 px-5 lg:px-12 py-5">
           <div className="flex items-center justify-between">
             <a className="relative z-10 pr-4 lg:pr-0" href="#">
               <Image src={logo} alt="logo" width={500} height={500} className='h-9 w-9' />
             </a>
-            <ul className="hidden xl:absolute xl:top-1/2 xl:left-1/2 xl:transform xl:-translate-y-1/2 xl:-translate-x-1/2 xl:flex lg:justify-center gap-14">
-              {links.map((link, index) => (
-                <li>
-                  <a href={link.href} className="text-lg text-white hover:text-gray-300 font-medium transition duration-200">{link.title}</a>
-                </li>
-              ))}
-            </ul>
             <div className="hidden xl:flex items-center gap-2">
               <a className="hidden 2xl:block mr-8" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 20 20" fill="none">
@@ -40,63 +33,12 @@ export default function Home() {
               {/* <a className="inline-flex justify-center items-center text-center h-12 p-5 px-6 font-semibold text-white hover:text-black focus:text-black bg-transparent hover:bg-gray-50 focus:bg-gray-50 border border-gray-100 rounded-full focus:ring-4 focus:ring-gray-200 focus:ring-opacity-50 transition duration-200" href="#">Login</a> */}
               <a className="inline-flex justify-center items-center text-center h-12 p-5 px-6 font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a>
             </div>
-            <a className="flex items-center justify-center h-12 p-5 text-white border border-gray-300 xl:hidden rounded-full" href="#">
-              <svg width={20} height={16} viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.75 6.75003H1.25C0.559648 6.75003 0 7.30968 0 8.00003C0 8.69038 0.559648 9.25003 1.25 9.25003H18.75C19.4404 9.25003 20 8.69038 20 8.00003C20 7.30968 19.4404 6.75003 18.75 6.75003Z" fill="currentColor" />
-                <path d="M1.25 3.41669H18.75C19.4404 3.41669 20 2.85704 20 2.16669C20 1.47634 19.4404 0.916687 18.75 0.916687H1.25C0.559648 0.916687 0 1.47634 0 2.16669C0 2.85704 0.559648 3.41669 1.25 3.41669Z" fill="currentColor" />
-                <path d="M18.75 12.5834H1.25C0.559648 12.5834 0 13.143 0 13.8334C0 14.5237 0.559648 15.0834 1.25 15.0834H18.75C19.4404 15.0834 20 14.5237 20 13.8334C20 13.143 19.4404 12.5834 18.75 12.5834Z" fill="currentColor" />
-              </svg>
-            </a>
+
+            <a className="inline-flex justify-center items-center text-center p-3 text-xs font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a>
           </div>
         </nav>
 
-        <div className="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-xs z-50">
-          <div className="fixed inset-0 bg-black opacity-20" />
-          <nav className="relative p-8 w-full h-full bg-white overflow-y-auto">
-            <div className="flex flex-col justify-between h-full">
-              <div className="flex items-center justify-between mb-8">
-                <a className="pr-4" href="#">
-                  <img className="h-8" src="fily-assets/logos/fily-treck-black-logo.svg" alt="" />
-                </a>
-                <a href="#">
-                  <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 18L18 6M6 6L18 18" stroke="#252E4A" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </a>
-              </div>
-              <ul className="flex flex-col gap-8 py-16">
-                <li>
-                  <a href="#" className="text-lg text-black hover:text-gray-700 font-medium transition duration-200">Our features</a>
-                </li>
-                <li>
-                  <a href="#" className="text-lg text-black hover:text-gray-700 font-medium transition duration-200">How to use?</a>
-                </li>
-                <li>
-                  <a href="#" className="inline-flex items-center text-lg text-black hover:text-gray-700 font-medium transition duration-200">
-                    <span className="mr-2.5">Use cases</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width={13} height={13} viewBox="0 0 13 13" fill="none">
-                      <g>
-                        <path d="M11.8098 3.51666C11.7362 3.43826 11.6487 3.37604 11.5523 3.33357C11.4559 3.2911 11.3525 3.26924 11.2481 3.26924C11.1436 3.26924 11.0402 3.2911 10.9438 3.33357C10.8474 3.37604 10.7599 3.43826 10.6864 3.51666L7.06305 7.34761C6.9895 7.42601 6.902 7.48824 6.8056 7.5307C6.70919 7.57317 6.60579 7.59503 6.50135 7.59503C6.39691 7.59503 6.29351 7.57317 6.19711 7.5307C6.1007 7.48824 6.0132 7.42601 5.93966 7.34761L2.31633 3.51666C2.24279 3.43826 2.15529 3.37604 2.05888 3.33357C1.96248 3.2911 1.85907 3.26924 1.75464 3.26924C1.6502 3.26924 1.5468 3.2911 1.45039 3.33357C1.35399 3.37604 1.26649 3.43826 1.19294 3.51666C1.0456 3.67338 0.962891 3.88538 0.962891 4.10636C0.962891 4.32734 1.0456 4.53934 1.19294 4.69606L4.82418 8.53537C5.26918 9.00529 5.87241 9.26924 6.50135 9.26924C7.13029 9.26924 7.73352 9.00529 8.17852 8.53537L11.8098 4.69606C11.9571 4.53934 12.0398 4.32734 12.0398 4.10636C12.0398 3.88538 11.9571 3.67338 11.8098 3.51666Z" fill="currentColor" />
-                      </g>
-                      <defs>
-                        <clipPath>
-                          <rect width={12} height={12} fill="white" transform="translate(0.5 0.5)" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-lg text-black hover:text-gray-700 font-medium transition duration-200">Plans &amp; pricing</a>
-                </li>
-              </ul>
-              <div className="flex flex-col items-center gap-2">
-                {/* <a className="inline-flex justify-center items-center text-center w-full h-12 p-5 px-6 font-semibold text-black hover:text-black focus:text-black bg-transparent hover:bg-white focus:bg-white border border-gray-100 rounded-full focus:ring-4 focus:ring-white focus:ring-opacity-50 transition duration-200" href="#">Login</a> */}
-                <a className="inline-flex justify-center items-center text-center w-full h-12 p-5 px-6 font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a>
-              </div>
-            </div>
-          </nav>
-        </div>
+
         <div className="container mx-auto px-4">
           <div className="relative z-10 py-12 lg:py-0 md:pb-36">
             <div className="flex flex-wrap items-center -m-8">
@@ -108,7 +50,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 p-8">
+              <div className="w-full md:w-1/2 px-8 py-4 lg:p-8">
                 <div className="md:max-w-3xl">
                   <div className="flex flex-wrap items-center -m-2 mb-10">
                     <div className="w-auto p-2">
