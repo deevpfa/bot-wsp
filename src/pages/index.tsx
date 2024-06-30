@@ -31,17 +31,17 @@ export default function Home() {
                 </svg>
               </a>
               {/* <a className="inline-flex justify-center items-center text-center h-12 p-5 px-6 font-semibold text-white hover:text-black focus:text-black bg-transparent hover:bg-gray-50 focus:bg-gray-50 border border-gray-100 rounded-full focus:ring-4 focus:ring-gray-200 focus:ring-opacity-50 transition duration-200" href="#">Login</a> */}
-              <a className="inline-flex justify-center items-center text-center h-12 p-5 px-6 font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a>
+              <a className="lg:inline-flex justify-center hidden items-center text-center h-12 p-5 px-6 font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a>
             </div>
 
-            <a className="inline-flex justify-center items-center text-center p-3 text-xs font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a>
+            <a className="inline-flex lg:hidden justify-center items-center text-center p-3 text-xs font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a>
           </div>
         </nav>
 
 
         <div className="container mx-auto px-4">
           <div className="relative z-10 py-12 lg:py-0 md:pb-36">
-            <div className="flex flex-wrap items-center -m-8">
+            <div className="flex flex-wrap items-center">
               <div className="w-full md:w-1/2">
                 <div className="flex flex-wrap justify-center">
                   <div className="relative w-auto p-5 lg:p-0">
@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full md:w-1/2 p-8">
-                <form action="#" className="pb-28 px-16 max-w-2xl mx-auto bg-white bg-opacity-5 w-full rounded-3xl">
+                <form action="#" className=" lg:px-16 max-w-2xl mx-auto bg-white bg-opacity-5 w-full rounded-3xl">
                   <div className="flex flex-wrap -m-2.5 mb-4">
                     <div className="w-full md:w-1/2 p-2.5">
                       <label htmlFor="contact-input-01-1" className="mb-2 inline-block text-sm text-gray-500 font-medium">Nombre</label>
