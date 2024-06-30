@@ -45,7 +45,7 @@ export default function Home() {
               <div className="w-full md:w-1/2">
                 <div className="flex flex-wrap justify-center">
                   <div className="relative w-auto p-5 lg:p-0">
-                    <Image className="lg:mt-9  transform  z-40 lg:hover:scale-105 transition duration-500 w-auto h-[320px] sm:h-[420px] md:h-[720px] " width={500} height={600} src={robot} alt="" />
+                    <Image className=" transform  z-40 lg:hover:scale-105 transition duration-500 w-auto h-[320px] sm:h-[420px] md:h-[680px] " width={500} height={600} src={robot} alt="" />
                     {/* <Image className="hidden lg:block absolute top-0 lg:left-24 xl:left-40 object-cover transform hover:scale-105 transition duration-500" width={500} height={600} style={{ height: 630 }} src={telefono1} alt="" /> */}
                   </div>
                 </div>
@@ -83,17 +83,17 @@ export default function Home() {
 
 
       {/* Formulario */}
-      <div className='background-image'>
-        <section id="form" className="py-12 z-20 relative md:py-24 content">
+      <div id="form" className='lg:pb-28 background-image'>
+        <section className="py-12 z-20 relative md:py-24 content">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap -m-8">
-              <div className="w-full md:w-1/2 p-8">
+            <div className="flex flex-wrap">
+              <div className="w-full md:w-1/2 lg:p-8">
                 <div className="pt-18">
                   <h2 className="mb-9 font-heading text-4xl md:text-4xl font-bold text-white">Déjanos tus datos y empieza a automatizar tus conversaciones.</h2>
                   <p className="text-2xl text-white font-light leading-normal">Uno de nuestros asesores se comunicara contigo a la brevedad!</p>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 p-8">
+              <div className="w-full md:w-1/2 lg:p-8">
                 <form action="#" className=" lg:px-16 max-w-2xl mx-auto bg-white bg-opacity-5 w-full rounded-3xl">
                   <div className="flex flex-wrap -m-2.5 mb-4">
                     <div className="w-full md:w-1/2 p-2.5">
