@@ -102,8 +102,8 @@ export default function Home() {
             <div className="flex flex-wrap items-center -m-8">
               <div className="w-full md:w-1/2">
                 <div className="flex flex-wrap justify-center">
-                  <div className="relative w-auto">
-                    <Image className="lg:mt-9  transform  z-40 hover:scale-105 transition duration-500" width={500} height={600} style={{ height: 720, width: 720 }} src={robot} alt="" />
+                  <div className="relative w-auto p-5 lg:p-0">
+                    <Image className="lg:mt-9  transform  z-40 lg:hover:scale-105 transition duration-500 w-auto h-[320px] sm:h-[420px] md:h-[720px] " width={500} height={600} src={robot} alt="" />
                     {/* <Image className="hidden lg:block absolute top-0 lg:left-24 xl:left-40 object-cover transform hover:scale-105 transition duration-500" width={500} height={600} style={{ height: 630 }} src={telefono1} alt="" /> */}
                   </div>
                 </div>
