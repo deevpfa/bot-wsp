@@ -2,6 +2,9 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
 const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
+const {
+	default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 delete colors["lightBlue"];
 delete colors["warmGray"];
@@ -44,6 +47,18 @@ module.exports = withMT({
 		content: ["./src/**/*.{js,ts,jsx,tsx}"],
 	},
 	theme: {
+		darkMode: "class",
+		animation: {
+			scroll:
+				"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+		},
+		keyframes: {
+			scroll: {
+				to: {
+					transform: "translate(calc(-50% - 0.5rem))",
+				},
+			},
+		},
 		colors: {
 			colors,
 			...AddColors,
@@ -62,6 +77,17 @@ module.exports = withMT({
 			}
 		},
 		extend: {
+			animation: {
+				scroll:
+					"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+			},
+			keyframes: {
+				scroll: {
+					to: {
+						transform: "translate(calc(-50% - 0.5rem))",
+					},
+				},
+			},
 			colors: {
 				colors,
 				...AddColors,
@@ -71,5 +97,15 @@ module.exports = withMT({
 			},
 		},
 	},
-	plugins: [require("@tailwindcss/forms")],
+	plugins: [require("@tailwindcss/forms"), addVariablesForColors],
 });
+function addVariablesForColors({ addBase, theme }) {
+	let allColors = flattenColorPalette(theme("colors"));
+	let newVars = Object.fromEntries(
+		Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	);
+
+	addBase({
+		":root": newVars,
+	});
+}
