@@ -5,7 +5,7 @@ import { cn } from "@/constants/common";
 
 export const FlipWords = ({
     words,
-    duration = 1000,
+    duration = 1500,
     className,
 }: {
     words: string[];
@@ -45,10 +45,10 @@ export const FlipWords = ({
                     y: 0,
                 }}
                 transition={{
-                    duration: 0.4,
+                    duration: 0.6,
                     ease: "easeInOut",
                     type: "spring",
-                    stiffness: 100,
+                    stiffness: 80,
                     damping: 10,
                 }}
                 exit={{
@@ -60,7 +60,7 @@ export const FlipWords = ({
                     position: "absolute",
                 }}
                 className={cn(
-                    "inline-block relative text-left",
+                    "relative",
                     className
                 )}
                 key={currentWord}
@@ -74,7 +74,7 @@ export const FlipWords = ({
                             delay: index * 0.08,
                             duration: 0.4,
                         }}
-                        className="inline-block"
+                        className="relative"
                     >
                         {letter}
                     </motion.span>
