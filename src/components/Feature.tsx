@@ -50,7 +50,7 @@ export function FeaturesSectionDemo() {
         },
     ];
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  relative z-10 py-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3  relative z-10 py-10 max-w-7xl mx-auto">
             {features.map((feature, index) => (
                 <Feature key={feature.title} {...feature} index={index} />
             ))}
@@ -72,7 +72,7 @@ const Feature = ({
     return (
         <div
             className={cn(
-                "flex flex-col lg:border-r-[0.2px] py-10 relative group/feature text-white",
+                "flex flex-col px-4 lg:px-0 lg:border-r-[0.2px] py-10 relative group/feature text-white",
                 (index === 0 || index === 3) && "lg:border-l-[0.2px] text-white",
                 index < 3 && "lg:border-b-[0.2px] text-white"
             )}
