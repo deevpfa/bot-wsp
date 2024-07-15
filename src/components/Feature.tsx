@@ -35,7 +35,7 @@ export function FeaturesSectionDemo() {
         },
         {
             title: "Uso Eficiente de WhatsApp",
-            description: "mplementamos WhatsApp Business para comunicación directa y en tiempo real.",
+            description: "Implementamos WhatsApp Business para comunicación directa y en tiempo real.",
             icon: <IconBrandWhatsapp />,
         },
         {

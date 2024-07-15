@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <div className='relative bg-black'>
-      <section className="relative bg-blue  pb-24  xl:pb-32 overflow-hidden">
+      <section className="relative bg-blue bg-cover lg:bg-contain pb-24  xl:pb-32 overflow-hidden">
         <Header />
         <div className="container mx-auto px-4">
           <div className="relative z-10  md:py-12 lg:py-0 md:pb-36">
