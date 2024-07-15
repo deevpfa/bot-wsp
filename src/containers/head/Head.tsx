@@ -9,6 +9,7 @@ export const HeadComponent: FC<{ title: string | null }> = ({ title }) => {
                 <meta name="author" content="" />
                 <link rel="shortcut icon" href='images/IsoSinFondo.png' />
                 <meta name="description" content="" />
+                <meta name="facebook-domain-verification" content="upnahiawmm21w0qd74rflochd2h7sq" />
             </Head>
         </>
     )

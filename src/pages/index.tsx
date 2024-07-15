@@ -38,14 +38,14 @@ export default function Home() {
   return (
     <div className='bg-primary-900 relative'>
       <section className="relative bg-black  pb-24  xl:pb-32 overflow-hidden">
-        <motion.nav
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.2,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
+        <nav
+          // initial={{ opacity: 0, y: -40 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          // transition={{
+          //   delay: 0.2,
+          //   duration: 0.8,
+          //   ease: "easeInOut",
+          // }}
           className="relative z-10 px-5 lg:px-12 py-5"
         >
           <div className="flex items-center justify-between">
@@ -59,13 +59,13 @@ export default function Home() {
 
             <a className="inline-flex lg:hidden justify-center items-center text-center p-3 text-xs font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a>
           </div >
-        </motion.nav>
+        </nav>
 
 
         <div className="container mx-auto px-4">
           <div className="relative z-10  md:py-12 lg:py-0 md:pb-36">
             <div className="flex flex-wrap items-center">
-              <div className="w-full md:w-1/2">
+              <div className="w-full lg:w-1/2">
                 <div className="flex flex-wrap justify-center">
                   <ThreeDCardContainer>
 
@@ -95,7 +95,7 @@ export default function Home() {
                   duration: 0.8,
                   ease: "easeInOut",
                 }}
-                className="w-full md:w-1/2 px-8 py-4 lg:p-8"
+                className="w-full lg:w-1/2 px-8 py-4 lg:p-8"
               >
                 <div className="md:max-w-3xl">
                   {/* <div className="flex flex-wrap items-center -m-2 mb-10">
@@ -116,7 +116,7 @@ export default function Home() {
                       <span className="text-sm font-medium text-white">340k+ users</span>
                     </div>
                   </div> */}
-                  <h1 className="mb-12 font-heading text-4xl md:text-6xl xl:text-6xl text-white font-bold"><span className="bg-gradient-text" style={{ backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Automatizá tu </span> <span><FlipWords words={['Negocio', 'E-Commerce', 'Plataforma']} /><br /> de forma eficiente con nuestros ChatBots.</span></h1>
+                  <h1 className="mb-12 font-heading text-4xl md:text-6xl xl:text-6xl text-white font-bold"><span className="bg-gradient-text" style={{ backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Automatizá tu </span> <span><FlipWords words={['Negocio', 'E-Commerce', 'Emprendimiento']} /><br /> de forma eficiente con nuestros ChatBots.</span></h1>
 
                 </div>
               </motion.div>
@@ -124,7 +124,7 @@ export default function Home() {
           </div>
         </div>
         <img className="absolute inset-0 w-full h-full object-cover select-none" src="fily-assets/gradients/gradient-header4.png" alt="" />
-        <div className='z-50 -bottom-5 md:-bottom-40  xl:-bottom-64 right-0 left-0 absolute'>
+        <div className='z-50 -bottom-5 md:-bottom-35 lg:-bottom-40  xl:-bottom-50 right-0 left-0 absolute'>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#59094b" fill-opacity="1" d="M0,32L80,53.3C160,75,320,117,480,112C640,107,800,53,960,32C1120,11,1280,21,1360,26.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
           {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a10d3f" fill-opacity="1" d="M0,128L60,122.7C120,117,240,107,360,90.7C480,75,600,53,720,42.7C840,32,960,32,1080,32C1200,32,1320,32,1380,32L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg> */}
           {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a10d3f" fill-opacity="1" d="M0,128L120,117.3C240,107,480,85,720,85.3C960,85,1200,107,1320,117.3L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg> */}
@@ -148,14 +148,14 @@ export default function Home() {
           <InfiniteMovingCards
             pauseOnHover={false}
             items={testimonials}
-            direction="right"
+            direction="left"
             speed="normal"
           />
         </motion.div>
       </section>
 
       {/* Formulario */}
-      < div id="form" className='lg:pb-28' >
+      < div id="form" className='' >
         <section className="py-12 z-20 relative md:py-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
