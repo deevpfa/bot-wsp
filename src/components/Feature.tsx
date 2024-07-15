@@ -72,27 +72,27 @@ const Feature = ({
     return (
         <div
             className={cn(
-                "flex flex-col px-4 lg:px-0 lg:border-r-[0.2px] py-10 relative group/feature text-white",
+                "flex flex-col px-4 lg:px-0  lg:border-r-[0.2px] py-6 lg:py-10 relative group/feature text-white",
                 (index === 0 || index === 3) && "lg:border-l-[0.2px] text-white",
                 index < 3 && "lg:border-b-[0.2px] text-white"
             )}
         >
             {index < 3 && (
-                <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-colors-neutral-600 to-transparent pointer-events-none" />
+                <div className="opacity-0 lg:group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-colors-neutral-600 to-transparent pointer-events-none" />
             )}
             {index >= 3 && (
-                <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-colors-neutral-600 to-transparent pointer-events-none" />
+                <div className="opacity-0 lg:group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-colors-neutral-600 to-transparent pointer-events-none" />
             )}
-            <div className="mb-4 relative z-10 px-10 text-white dark:text-white">
+            <div className="mb-4 relative z-10 px-3 lg:px-10 text-white dark:text-white">
                 {icon}
             </div>
-            <div className="text-lg font-bold mb-2 relative z-10 px-10">
-                <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-colors-neutral-300  transition-all duration-200 origin-center" />
-                <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-white dark:text-white">
+            <div className="lg:text-lg text-sm font-bold mb-2 relative z-10 px-3 lg:px-10">
+                <div className="absolute left-0 inset-y-0 h-6 lg:group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-colors-neutral-300  transition-all duration-200 origin-center" />
+                <span className="lg:group-hover/feature:translate-x-2 transition duration-200 inline-block text-white dark:text-white">
                     {title}
                 </span>
             </div>
-            <p className="text-sm text-white dark:text-white max-w-xs relative z-10 px-10">
+            <p className="lg:text-sm text-xs text-white dark:text-white max-w-xs relative z-10 px-3 lg:px-10">
                 {description}
             </p>
         </div>

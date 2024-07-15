@@ -133,7 +133,7 @@ export default function Home() {
 
       <div className='bg-green'>
         {/* BENEFICIOS */}
-        <section className='md:py-24' id='benefits'>
+        <section className='py-12 md:py-24' id='benefits'>
           <div className='flex justify-center items-center'>
             <h1 className='text-white text-4xl font-semibold tracking-wider'>Beneficios</h1>
           </div>
