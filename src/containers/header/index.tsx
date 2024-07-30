@@ -26,8 +26,8 @@ export function Header({ }: IndexProps) {
                         className="fixed w-full top-0 text-white flex justify-center z-[200] bg-black h-screen">
                         <XMarkIcon onClick={() => handleOpenHamburger(false)} className="h-9 w-9  text-white absolute top-10 right-12" />
                         <div className="flex gap-8 justify-center flex-col items-center  text-4xl ">
+                            <a href="#us" onClick={() => handleOpenHamburger(false)}>Nosotros</a>
                             <a href="#benefits" onClick={() => handleOpenHamburger(false)}>Beneficios</a>
-                            <a>Nosotros</a>
                             {/* <a href="#form" onClick={() => handleOpenHamburger(false)}>Contactanos</a> */}
                         </div>
                     </motion.div>
@@ -40,8 +40,8 @@ export function Header({ }: IndexProps) {
                         <Image src={logo} alt="logo" width={500} height={500} className='h-32 w-32' />
                     </a >
                     <div className="hidden md:flex items-center gap-12 text-white">
+                        <a href="#us" onClick={() => handleOpenHamburger(false)}>Nosotros</a>
                         <a href="#benefits" onClick={() => handleOpenHamburger(false)}>Beneficios</a>
-                        <a>Nosotros</a>
                         {/* <a className="inline-flex justify-center items-center text-center h-12 p-5 px-6 font-semibold text-white hover:text-black focus:text-black bg-transparent hover:bg-gray-50 focus:bg-gray-50 border border-gray-100 rounded-full focus:ring-4 focus:ring-gray-200 focus:ring-opacity-50 transition duration-200" href="#">Login</a> */}
                         {/* <a className="md:inline-flex justify-center hidden items-center text-center h-12 p-5 px-6 font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a> */}
                     </div>

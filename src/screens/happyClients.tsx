@@ -28,7 +28,7 @@ interface HappyClientsProps { }
 
 export function HappyClients({ }: HappyClientsProps) {
     return (
-        <div className=''>
+        <div className='pb-24'>
             <div className='flex justify-center items-center'>
                 <h1 className='text-white text-4xl font-semibold tracking-wider'>Clientes Felices</h1>
             </div>
@@ -41,7 +41,7 @@ export function HappyClients({ }: HappyClientsProps) {
                     duration: 0.5,
                     ease: "easeInOut",
                 }}
-                className="h-[30rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
+                className="mt-24 rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
                 <InfiniteMovingCards
                     pauseOnHover={false}
                     items={testimonials}

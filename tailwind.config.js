@@ -38,6 +38,7 @@ const AddColors = {
 		700: "#1a1a26",
 		800: "#181319",
 		900: "#16160c",
+		1000: "#1f1d1d"
 	},
 };
 module.exports = withMT({

@@ -9,16 +9,16 @@ export function Benefits({ }: BenefitsProps) {
         <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 1, x: 0 }}
             transition={{
                 delay: 0.2,
                 duration: 0.5,
                 ease: "easeInOut",
             }}
-            className='' id='benefits'
         >
 
-            <div className='flex justify-center items-center'>
+            <div className='flex justify-center items-center'
+                id='benefits'>
                 <h1 className='text-white text-4xl font-semibold tracking-wider'>Beneficios</h1>
             </div>
             <FeaturesSectionDemo />

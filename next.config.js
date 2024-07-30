@@ -9,7 +9,7 @@ const nextConfig = {
 		includePaths: [path.join(__dirname, "styles")],
 	},
 	images: {
-		domains: ["tailwindui.com", "localhost:3000", "avatars.githubusercontent.com"],
+		domains: ["tailwindui.com", "localhost:3000", "avatars.githubusercontent.com", "images.unsplash.com", "assets.aceternity.com"],
 		// loader: 'custom',
 		// loaderFile: './public/images/photo.jpeg',
 	},

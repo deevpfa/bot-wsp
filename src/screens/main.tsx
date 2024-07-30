@@ -4,6 +4,7 @@ import React from "react";
 import Image from 'next/image'
 import robot from '../../public/images/robot.png'
 import { FlipWords } from "@/components/FlipWord";
+import Button from "@/components/MyButton";
 
 interface MainProps { }
 
@@ -16,12 +17,12 @@ export function Main({ }: MainProps) {
                         <ThreeDCardContainer>
 
                             <motion.div
-                                initial={{ opacity: 0, x: -40 }}
+                                initial={{ opacity: 0, x: -100 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 1, x: 0 }}
                                 transition={{
                                     delay: 0.2,
-                                    duration: 0.5,
+                                    duration: 1.2,
                                     ease: "easeInOut",
                                 }}
                                 className="relative w-auto "
@@ -33,12 +34,12 @@ export function Main({ }: MainProps) {
                     </div>
                 </div>
                 <motion.div
-                    initial={{ opacity: 0, x: 40 }}
+                    initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 1, x: 0 }}
                     transition={{
                         delay: 0.2,
-                        duration: 0.5,
+                        duration: 1.2,
                         ease: "easeInOut",
                     }}
                     className="w-full lg:w-1/2 px-8 py-4 lg:p-8"
@@ -46,7 +47,18 @@ export function Main({ }: MainProps) {
                     <div className="md:max-w-3xl">
 
                         <h1 className="font-heading text-4xl md:text-6xl xl:text-6xl text-white font-bold"><span className="bg-gradient-text" style={{ backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Automatizá tu </span> <span><FlipWords words={['Negocio', 'E-Commerce', 'Emprendimiento']} />de forma eficiente con nuestros ChatBots.</span></h1>
-
+                        <motion.div
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 1, x: 0 }}
+                            transition={{
+                                delay: 0.2,
+                                duration: 1.6,
+                                ease: "easeInOut",
+                            }}
+                        >
+                            <Button className="mt-8" size="lg">Demesc Bot Chat</Button>
+                        </motion.div>
                     </div>
                 </motion.div>
             </div>
