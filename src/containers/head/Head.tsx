@@ -11,7 +11,7 @@ export const HeadComponent: FC<{ title: string | null }> = ({ title }) => {
                 <link rel="shortcut icon" href='images/IsoSinFondo.png' />
                 <meta name="description" content="" />
                 <meta name="facebook-domain-verification" content="upnahiawmm21w0qd74rflochd2h7sq" />
-                <Script>
+                {/* <Script>
                     window.fbAsyncInit = function() {
                         //@ts-ignore 
                         FB.init({
@@ -21,7 +21,7 @@ export const HeadComponent: FC<{ title: string | null }> = ({ title }) => {
                             version: 'v20.0'
                         })
                     };
-                </Script>
+                </Script> */}
                 <Script async defer crossOrigin="anonymous"
                     src="https://connect.facebook.net/en_US/sdk.js">
                 </Script>

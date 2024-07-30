@@ -78,10 +78,10 @@ const Feature = ({
             )}
         >
             {index < 3 && (
-                <div className="opacity-0 lg:group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-colors-neutral-600 to-transparent pointer-events-none" />
+                <div className="opacity-0 lg:group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-primary-600 to-transparent pointer-events-none" />
             )}
             {index >= 3 && (
-                <div className="opacity-0 lg:group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-colors-neutral-600 to-transparent pointer-events-none" />
+                <div className="opacity-0 lg:group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-primary-600 to-transparent pointer-events-none" />
             )}
             <div className="mb-4 relative z-10 px-3 lg:px-10 text-white dark:text-white">
                 {icon}
