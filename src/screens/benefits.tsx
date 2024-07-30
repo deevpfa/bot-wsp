@@ -17,8 +17,7 @@ export function Benefits({ }: BenefitsProps) {
             }}
         >
 
-            <div className='flex justify-center items-center'
-                id='benefits'>
+            <div className='flex justify-center items-center' id='benefits'>
                 <h1 className='text-white text-4xl font-semibold tracking-wider'>Beneficios</h1>
             </div>
             <FeaturesSectionDemo />

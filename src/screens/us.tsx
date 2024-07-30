@@ -181,7 +181,7 @@ export const SkeletonTwo = () => {
     return (
         <div className="relative flex flex-col items-center p-8 gap-10 h-full overflow-hidden">
             {/* TODO */}
-            <div className="flex flex-row -ml-20">
+            <div className="flex flex-row md:-ml-20">
                 {images.map((image, idx) => (
                     <motion.div
                         variants={imageVariants}
@@ -203,7 +203,7 @@ export const SkeletonTwo = () => {
                     </motion.div>
                 ))}
             </div>
-            <div className="flex flex-row -ml-20">
+            <div className="flex flex-row md:-ml-20">
                 {images.map((image, idx) => (
                     <motion.div
                         key={"images-second" + idx}
