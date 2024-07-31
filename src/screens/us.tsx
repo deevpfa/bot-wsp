@@ -15,14 +15,14 @@ export default function Us() {
                 "Nuestro dashboard es fácil de usar y te permite ver tus métricas en tiempo real.",
             skeleton: <SkeletonOne />,
             className:
-                "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
+                "col-span-1 lg:col-span-4 md:border-b mt-4 md:mt-0 lg:border-r dark:border-neutral-800",
         },
         {
             title: "Langchain como IA principal",
             description:
                 "Usamos Langchain para ayudarte a automatizar las tareas de manera más eficiente.",
             skeleton: <SkeletonTwo />,
-            className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
+            className: "md:border-b mt-4 md:mt-0 col-span-1 lg:col-span-2 dark:border-neutral-800",
         },
         {
             title: "Miranos en YouTube",
@@ -30,14 +30,14 @@ export default function Us() {
                 "Mira nuestros tutoriales en YouTube para aprender más sobre nuestra tecnología.",
             skeleton: <SkeletonThree />,
             className:
-                "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
+                "col-span-1 lg:col-span-3 mt-4 md:mt-0  lg:border-r  dark:border-neutral-800",
         },
         {
             title: "Deploy en segundos",
             description:
                 "Mira cómo tu aplicación se despliega en segundos con nuestra tecnología de punta.",
             skeleton: <SkeletonFour />,
-            className: "col-span-1 lg:col-span-3 border-b lg:border-none",
+            className: "col-span-1 mt-4 md:mt-0  lg:col-span-3 md:border-b lg:border-none",
         },
     ];
     return (
@@ -62,7 +62,7 @@ export default function Us() {
                     ease: "easeInOut",
                 }}
                 className="relative ">
-                <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800 h-[2000px] md:h-[1200px]">
+                <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800 h-[2000px] md:h-[1000px]">
                     {features.map((feature) => (
                         <FeatureCard key={feature.title} className={feature.className}>
                             <FeatureTitle>{feature.title}</FeatureTitle>
@@ -84,7 +84,7 @@ const FeatureCard = ({
     className?: string;
 }) => {
     return (
-        <div className={cn(`p-4 sm:p-8 relative overflow-hidden`, className)}>
+        <div className={cn(`p-2 sm:p-4 relative overflow-hidden`, className)}>
             {children}
         </div>
     );
@@ -234,8 +234,8 @@ export const SkeletonTwo = () => {
 
 export const SkeletonFour = () => {
     return (
-        <div className="h-60 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
-            <Globe className="absolute -right-10 md:-right-10 -bottom-80 md:-bottom-72" />
+        <div className="h-72 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
+            <Globe className="absolute -mt-72 -right-14 md:-right-40  md:-bottom-16" />
         </div>
     );
 };
@@ -249,7 +249,7 @@ export const Globe = ({ className }: { className?: string }) => {
         if (!canvasRef.current) return;
 
         const globe = createGlobe(canvasRef.current, {
-            devicePixelRatio: 2,
+            devicePixelRatio: 4,
             width: 600 * 2,
             height: 600 * 2,
             phi: 0,
