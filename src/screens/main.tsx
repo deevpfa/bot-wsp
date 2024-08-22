@@ -21,8 +21,7 @@ export function Main({ }: MainProps) {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 1, x: 0 }}
                                 transition={{
-                                    delay: 0.2,
-                                    duration: 1.2,
+                                    duration: 0.8,
                                     ease: "easeInOut",
                                 }}
                                 className="relative w-auto "
@@ -38,8 +37,7 @@ export function Main({ }: MainProps) {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 1, x: 0 }}
                     transition={{
-                        delay: 0.2,
-                        duration: 1.2,
+                        duration: 0.8,
                         ease: "easeInOut",
                     }}
                     className="w-full lg:w-1/2 p-8 pt-16 pb-32 lg:p-8"
@@ -52,8 +50,7 @@ export function Main({ }: MainProps) {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 1, x: 0 }}
                             transition={{
-                                delay: 0.2,
-                                duration: 1.6,
+                                duration: 0.9,
                                 ease: "easeInOut",
                             }}
                         >
