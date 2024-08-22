@@ -41,14 +41,14 @@ export default function Us() {
         },
     ];
     return (
-        <div className="relative z-20 py-10 max-w-7xl mx-auto" id='us'>
+        <div className="relative z-20 py-10 px-2 max-w-7xl mx-auto" id='us'>
             <div className="px-8">
-                <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center font-semibold text-white">
+                <h4 className="text-4xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center font-semibold text-white">
                     Nosotros
                 </h4>
 
-                <p className="text-base lg:text-lg  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-                    Intentando automatizar el mundo, un paso a la vez. Con nuestra tecnología de punta y nuestro equipo de expertos, estamos aquí para ayudarte a lograr tus objetivos.
+                <p className="text-xl lg:text-xl italic  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
+                    "Intentando automatizar el mundo, un paso a la vez. Con nuestra tecnología de punta y nuestro equipo de expertos, estamos aquí para ayudarte a lograr tus objetivos."
                 </p>
             </div>
 
@@ -62,7 +62,7 @@ export default function Us() {
                     ease: "easeInOut",
                 }}
                 className="relative ">
-                <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800 h-[2000px] md:h-[1000px]">
+                <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800 gap-20 h-[2000px] md:h-[1000px]">
                     {features.map((feature) => (
                         <FeatureCard key={feature.title} className={feature.className}>
                             <FeatureTitle>{feature.title}</FeatureTitle>
@@ -92,7 +92,7 @@ const FeatureCard = ({
 
 const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
     return (
-        <p className=" max-w-5xl mx-auto text-left tracking-tight text-white dark:text-white text-xl md:text-2xl font-semibold">
+        <p className=" max-w-5xl mx-auto text-left tracking-tight text-white  text-2xl md:text-2xl font-semibold">
             {children}
         </p>
     );
@@ -102,7 +102,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
     return (
         <p
             className={cn(
-                "text-sm md:text-base  max-w-4xl text-left mx-auto",
+                "text-lg  max-w-4xl text-left mx-auto",
                 "text-neutral-500 text-center font-normal dark:text-neutral-300",
                 "text-left max-w-sm mx-0 md:text-sm my-2"
             )}
@@ -130,6 +130,7 @@ export const SkeletonOne = () => {
 
             <div className="absolute bottom-0 z-40 inset-x-0 h-60 bg-gradient-to-t from-secondary-1000 dark:from-black via-secondary-from-secondary-1000 dark:via-black to-transparent w-full pointer-events-none" />
             <div className="absolute top-0 z-40 inset-x-0 h-60 bg-gradient-to-b from-secondary-1000 dark:from-black via-transparent to-transparent w-full pointer-events-none" />
+
         </div>
     );
 };
@@ -235,7 +236,7 @@ export const SkeletonTwo = () => {
 export const SkeletonFour = () => {
     return (
         <div className="h-72 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
-            <Globe className="absolute -mt-64 -right-8 md:-right-40  md:-bottom-16" />
+            <Globe className="absolute -mt-80 -right-8 md:-right-40  md:-bottom-16" />
         </div>
     );
 };

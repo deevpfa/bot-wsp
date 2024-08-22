@@ -15,6 +15,7 @@ export function Benefits({ }: BenefitsProps) {
                 duration: 0.5,
                 ease: "easeInOut",
             }}
+            className="px-2"
         >
 
             <div className='flex justify-center items-center' id='benefits'>

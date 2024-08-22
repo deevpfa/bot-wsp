@@ -48,6 +48,12 @@ export function HappyClients({ }: HappyClientsProps) {
                     direction="left"
                     speed="normal"
                 />
+                <InfiniteMovingCards
+                    pauseOnHover={false}
+                    items={testimonials}
+                    direction="right"
+                    speed="normal"
+                />
             </motion.div>
         </div>
     );
