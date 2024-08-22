@@ -62,7 +62,7 @@ export default function Us() {
                     ease: "easeInOut",
                 }}
                 className="relative ">
-                <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800 gap-20 h-[2000px] md:h-[1000px]">
+                <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800 gap-20 lg:gap-0 h-[2000px] md:h-[1000px]">
                     {features.map((feature) => (
                         <FeatureCard key={feature.title} className={feature.className}>
                             <FeatureTitle>{feature.title}</FeatureTitle>

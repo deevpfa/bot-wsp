@@ -94,7 +94,7 @@ input:focus
 	background-color: lighten($secondary, 5%)
 
 .bg-secondary-darken
-	background-color: darken($secondary, 78%)
+	background-color: darken($secondary, 79%)
 	// position: relative
 
 .bg-secondary-darken::before
@@ -198,12 +198,18 @@ p
 	background-position: top
 	background-repeat: no-repeat
 
-.wavePatternBg
-	// // background-color: $secondary
-	// background-image: url('/images/wave-pattern.svg')
+.hasRing
+	position: relative
 
-	// background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/images/wave-pattern.svg")
-	// backdrop-filter: blur(20px)
-	// background-size: cover
-	// background-repeat: repeat-y
-	// background-position: center
+	&::before
+		content: ""
+		position: absolute
+		top: -40px
+		left: -25px
+		width: 240px
+		height: 200px
+		background-image: url('/images/ring.svg')
+		background-size: contain
+		// background-position: center
+		background-repeat: no-repeat
+		z-index: 1
