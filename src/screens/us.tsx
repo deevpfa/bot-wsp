@@ -48,7 +48,7 @@ export default function Us() {
                 </h4>
 
                 <p className="text-base lg:text-lg  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-                    Intentando automatizar el mundo, un paso a la vez. Con nuestra tecnología de punta y nuestro equipo de expertos, estamos aquí para ayudarte a lograr sus objetivos.
+                    Intentando automatizar el mundo, un paso a la vez. Con nuestra tecnología de punta y nuestro equipo de expertos, estamos aquí para ayudarte a lograr tus objetivos.
                 </p>
             </div>
 
@@ -235,7 +235,7 @@ export const SkeletonTwo = () => {
 export const SkeletonFour = () => {
     return (
         <div className="h-72 md:h-60  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
-            <Globe className="absolute -mt-72 -right-14 md:-right-40  md:-bottom-16" />
+            <Globe className="absolute -mt-64 -right-8 md:-right-40  md:-bottom-16" />
         </div>
     );
 };

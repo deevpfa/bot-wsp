@@ -28,7 +28,7 @@ export function Main({ }: MainProps) {
                                 className="relative w-auto "
                             >
 
-                                <Image className=" transform  z-40 lg:hover:scale-105 transition duration-500 w-auto h-[320px] sm:h-[420px] md:h-[580px]  " width={500} height={600} src={robot} alt="" />
+                                <Image className=" transform  z-40 lg:hover:scale-105 transition duration-500 hidden lg:block w-auto h-[320px] sm:h-[420px] md:h-[580px]  " width={500} height={600} src={robot} alt="" />
                             </motion.div>
                         </ThreeDCardContainer>
                     </div>
@@ -42,11 +42,11 @@ export function Main({ }: MainProps) {
                         duration: 1.2,
                         ease: "easeInOut",
                     }}
-                    className="w-full lg:w-1/2 px-8 py-4 lg:p-8"
+                    className="w-full lg:w-1/2 p-8 pt-16 pb-32 lg:p-8"
                 >
-                    <div className="md:max-w-3xl">
+                    <div className="lg:max-w-3xl">
 
-                        <h1 className="font-heading text-4xl md:text-6xl xl:text-6xl text-white font-bold"><span className="bg-gradient-text" style={{ backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Automatizá tu </span> <span><FlipWords words={['Negocio', 'E-Commerce', 'Emprendimiento']} />de forma eficiente con nuestros ChatBots.</span></h1>
+                        <h1 className="font-heading text-5xl lg:text-6xl text-white font-bold"><span className="bg-gradient-text" style={{ backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Automatizá tu </span> <span><FlipWords words={['Negocio', 'E-Commerce', 'App', 'CRM']} />de forma eficiente con nuestros ChatBots.</span></h1>
                         <motion.div
                             initial={{ opacity: 0, x: 100 }}
                             animate={{ opacity: 1, x: 0 }}

@@ -7,7 +7,7 @@ import vmh from '../../public/images/vmh.png'
 
 const testimonials = [
     {
-        name: "San Martin",
+        name: "Club Atlético San Martin",
         image: san,
         quote: "Demesc nos permitio automatizar el registro de subscripciones de nuestros clientes, mejorando la experiencia de usuario y reduciendo el tiempo de respuesta."
     },
