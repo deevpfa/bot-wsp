@@ -56,7 +56,7 @@ export function Main({ }: MainProps) {
                             > */}
                             {/* <iframe src="https://lottie.host/embed/14d6ed68-d144-4cc7-ab74-50a20986a33c/ohIQl11bwW.json"></iframe> */}
                             {/* <iframe src="https://lottie.host/embed/7bd36afb-c858-4746-99a1-dddfe39e4114/QvPILzRhR2.json" className="w-[400px] h-[400px]"></iframe> */}
-                            <Image className=" transform  z-40 scale-105 transition duration-500 hidden lg:block w-auto h-[320px] sm:h-[500px] md:h-[600px]  " width={1200} height={1200} src={robot} alt="" />
+                            <Image className=" transform  z-40 scale-110 transition duration-500 hidden lg:block w-auto pt-16 h-[320px] sm:h-[500px] md:h-[600px]  " width={1200} height={1200} src={robot} alt="" />
                             {/* </motion.div> */}
                         </ThreeDCardContainer>
                     </div>

@@ -37,9 +37,9 @@ export function Header({ }: IndexProps) {
             >
                 <div className="flex items-center  justify-between">
                     <a className="relative z-10 pr-4 -mt-2 max-h-24 lg:pr-0" href="#">
-                        <Image src={logo} alt="logo" width={500} height={500} className='h-32 w-32' />
+                        <Image src={logo} alt="logo" width={500} height={500} className='h-36 w-36' />
                     </a >
-                    <div className="hidden md:flex items-center gap-12 text-white">
+                    <div className="hidden md:flex text-xl font-semibold pr-12 items-center gap-12 text-white">
                         <a href="#us" onClick={() => handleOpenHamburger(false)}>Nosotros</a>
                         <a href="#benefits" onClick={() => handleOpenHamburger(false)}>Beneficios</a>
                         {/* <a className="inline-flex justify-center items-center text-center h-12 p-5 px-6 font-semibold text-white hover:text-black focus:text-black bg-transparent hover:bg-gray-50 focus:bg-gray-50 border border-gray-100 rounded-full focus:ring-4 focus:ring-gray-200 focus:ring-opacity-50 transition duration-200" href="#">Login</a> */}
