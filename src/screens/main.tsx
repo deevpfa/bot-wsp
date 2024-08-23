@@ -40,11 +40,11 @@ export function Main({ }: MainProps) {
                         </motion.div>
                     </div>
                 </motion.div>
-                <div className="w-full lg:w-1/2">
-                    <div className="flex flex-wrap justify-center">
-                        <ThreeDCardContainer>
+                <div className="w-full lg:w-1/2 ">
+                    <div className="flex flex-wrap  justify-center">
+                        {/* <ThreeDCardContainer> */}
 
-                            {/* <motion.div
+                        {/* <motion.div
                                 initial={{ opacity: 0, x: -100 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 1, x: 0 }}
@@ -54,11 +54,13 @@ export function Main({ }: MainProps) {
                                 }}
                                 className="relative w-auto "
                             > */}
-                            {/* <iframe src="https://lottie.host/embed/14d6ed68-d144-4cc7-ab74-50a20986a33c/ohIQl11bwW.json"></iframe> */}
-                            {/* <iframe src="https://lottie.host/embed/7bd36afb-c858-4746-99a1-dddfe39e4114/QvPILzRhR2.json" className="w-[400px] h-[400px]"></iframe> */}
-                            <Image className=" transform  z-40 scale-110 transition duration-500 hidden lg:block w-auto pt-16 h-[320px] sm:h-[500px] md:h-[600px]  " width={1200} height={1200} src={robot} alt="" />
-                            {/* </motion.div> */}
-                        </ThreeDCardContainer>
+                        {/* <iframe src="https://lottie.host/embed/14d6ed68-d144-4cc7-ab74-50a20986a33c/ohIQl11bwW.json" className="w-[600px] h-[500px]"></iframe> */}
+                        <iframe src="https://lottie.host/embed/0441d013-d3c3-4f7f-b004-7b3976d71519/tGEMTWXgU8.json" className="w-[680px] h-[800px] absolute -top-28"></iframe>
+                        {/* <iframe src="https://lottie.host/embed/7bd36afb-c858-4746-99a1-dddfe39e4114/QvPILzRhR2.json" className="w-[400px] h-[400px]"></iframe> */}
+                        {/* <iframe src="https://lottie.host/embed/414aa858-e890-4534-a9a5-a87863046fe8/3GBwLkmJYZ.json" className="w-[600px] h-[500px]"></iframe> */}
+                        {/* <Image className=" transform  z-40 scale-110 transition duration-500 hidden lg:block w-auto pt-16 h-[320px] sm:h-[500px] md:h-[600px]  " width={1200} height={1200} src={robot} alt="" /> */}
+                        {/* </motion.div> */}
+                        {/* </ThreeDCardContainer> */}
                     </div>
                 </div>
             </div>
