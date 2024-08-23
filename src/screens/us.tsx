@@ -15,14 +15,14 @@ export default function Us() {
                 "Nuestro dashboard es fácil de usar y te permite ver tus métricas en tiempo real.",
             skeleton: <SkeletonOne />,
             className:
-                "col-span-1 lg:col-span-4 md:border-b mt-4 md:mt-0 lg:border-r dark:border-neutral-800",
+                "col-span-1 lg:col-span-4 md:border-b mt-4 md:mt-0 lg:border-r border-colors-neutral-600",
         },
         {
             title: "Langchain como IA principal",
             description:
                 "Usamos Langchain para ayudarte a automatizar las tareas de manera más eficiente.",
             skeleton: <SkeletonTwo />,
-            className: "md:border-b mt-4 md:mt-0 col-span-1 lg:col-span-2 dark:border-neutral-800",
+            className: "md:border-b mt-4 md:mt-0 col-span-1 lg:col-span-2 border-colors-neutral-600",
         },
         {
             title: "Miranos en YouTube",
@@ -30,7 +30,7 @@ export default function Us() {
                 "Mira nuestros tutoriales en YouTube para aprender más sobre nuestra tecnología.",
             skeleton: <SkeletonThree />,
             className:
-                "col-span-1 lg:col-span-3 mt-4 md:mt-0  lg:border-r  dark:border-neutral-800",
+                "col-span-1 lg:col-span-3 mt-4 md:mt-0  lg:border-r  border-colors-neutral-600",
         },
         {
             title: "Deploy en segundos",
@@ -62,7 +62,7 @@ export default function Us() {
                     ease: "easeInOut",
                 }}
                 className="relative ">
-                <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800 gap-20 lg:gap-0 h-[2000px] md:h-[1000px]">
+                <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md border-colors-neutral-600 gap-20 lg:gap-0 h-[2000px] md:h-[1000px]">
                     {features.map((feature) => (
                         <FeatureCard key={feature.title} className={feature.className}>
                             <FeatureTitle>{feature.title}</FeatureTitle>
