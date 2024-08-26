@@ -40,7 +40,7 @@ export function Main({ }: MainProps) {
                         </motion.div>
                     </div>
                 </motion.div>
-                <div className="w-full lg:w-1/2 ">
+                <div className="w-full lg:w-1/2 hidden lg:block">
                     <div className="flex flex-wrap  justify-center">
                         {/* <ThreeDCardContainer> */}
 
