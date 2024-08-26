@@ -35,6 +35,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export const handleGoTo = (id?: string) => {
+  if (!id) return;
+  const element = document.getElementById(id);
+  if (!element) return;
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
 /** URL de bandera */
 export const FLAG = (countryCode: string, size: "1x1" | "4x3" = "1x1") =>
   countryCode

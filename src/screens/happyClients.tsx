@@ -28,7 +28,7 @@ interface HappyClientsProps { }
 
 export function HappyClients({ }: HappyClientsProps) {
     return (
-        <div className='pb-24'>
+        <div className='py-16'>
             <div className='flex justify-center items-center'>
                 <h1 className='text-white text-4xl font-semibold tracking-wider'>Clientes Felices</h1>
             </div>

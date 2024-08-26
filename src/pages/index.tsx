@@ -23,12 +23,12 @@ export default function Home() {
       {/* <div className='relative bg-secondary-darken pb-12'> */}
       <Chat />
 
-      <div className='md:px-16 z-10 relative flex flex-col gap-y-16'>
+      <div className='md:px-16 z-10 relative flex flex-col'>
         <section className="relative  bg-cover lg:bg-contain overflow-hidden">
           <Header />
           <Main />
         </section >
-        <Image alt='' className='w-screen -mt-12 lg:-mt-32' src={globeUp} width={500} height={600} />
+        <Image alt='' className='w-screen -mt-12 lg:-mt-24' src={globeUp} width={500} height={600} />
         {/* BENEFICIOS */}
         <Benefits />
         {/* NOSOTROS */}

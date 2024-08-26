@@ -3,12 +3,16 @@ import Image from 'next/image'
 import logo from '../../../public/images/LogoSinFondo.png'
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+import { handleGoTo } from "@/constants/common";
 
 interface IndexProps { }
 
 export function Header({ }: IndexProps) {
     const [isHamburgerOpen, setIsHamburgerOpen] = React.useState(false);
-    const handleOpenHamburger = (status: boolean) => {
+    const handleClick = (status: boolean, id?: string) => {
+        if (id) {
+            handleGoTo(id);
+        }
         setIsHamburgerOpen(status);
         document.body.style.overflow = !status ? 'auto' : 'hidden';
     }
@@ -24,10 +28,10 @@ export function Header({ }: IndexProps) {
                             ease: "easeIn",
                         }}
                         className="fixed w-full top-0 text-white flex justify-center z-[200] bg-black h-screen">
-                        <XMarkIcon onClick={() => handleOpenHamburger(false)} className="h-9 w-9  text-white absolute top-10 right-12" />
+                        <XMarkIcon onClick={() => handleClick(false)} className="h-9 w-9  text-white absolute top-10 right-12" />
                         <div className="flex gap-8 justify-center flex-col items-center  text-4xl ">
-                            <a href="#us" onClick={() => handleOpenHamburger(false)}>Nosotros</a>
-                            <a href="#benefits" onClick={() => handleOpenHamburger(false)}>Beneficios</a>
+                            <a className="cursor-pointer" onClick={() => handleClick(false, 'us')}>Nosotros</a>
+                            <a className="cursor-pointer" onClick={() => handleClick(false, 'benefits')}>Beneficios</a>
                             {/* <a href="#form" onClick={() => handleOpenHamburger(false)}>Contactanos</a> */}
                         </div>
                     </motion.div>
@@ -40,13 +44,13 @@ export function Header({ }: IndexProps) {
                         <Image src={logo} alt="logo" width={500} height={500} className='h-36 w-36' />
                     </a >
                     <div className="hidden md:flex text-xl font-semibold pr-12 items-center gap-12 text-white">
-                        <a href="#us" onClick={() => handleOpenHamburger(false)}>Nosotros</a>
-                        <a href="#benefits" onClick={() => handleOpenHamburger(false)}>Beneficios</a>
+                        <a className="cursor-pointer" onClick={() => handleClick(false, 'us')}>Nosotros</a>
+                        <a className="cursor-pointer" onClick={() => handleClick(false, 'benefits')}>Beneficios</a>
                         {/* <a className="inline-flex justify-center items-center text-center h-12 p-5 px-6 font-semibold text-white hover:text-black focus:text-black bg-transparent hover:bg-gray-50 focus:bg-gray-50 border border-gray-100 rounded-full focus:ring-4 focus:ring-gray-200 focus:ring-opacity-50 transition duration-200" href="#">Login</a> */}
                         {/* <a className="md:inline-flex justify-center hidden items-center text-center h-12 p-5 px-6 font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a> */}
                     </div>
                     <div className="md:hidden flex pr-8 items-center">
-                        <Bars3Icon onClick={() => handleOpenHamburger(true)} className="h-9 w-9 text-white" />
+                        <Bars3Icon onClick={() => handleClick(true)} className="h-9 w-9 text-white" />
                     </div>
                     {/* <a className="inline-flex md:hidden justify-center items-center text-center p-3 text-xs font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200" href="#form">Contactanos</a> */}
                 </div >

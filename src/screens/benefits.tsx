@@ -15,10 +15,11 @@ export function Benefits({ }: BenefitsProps) {
                 duration: 0.5,
                 ease: "easeInOut",
             }}
+            id="benefits"
             className="px-2"
         >
 
-            <div className='flex justify-center items-center' id='benefits'>
+            <div className='flex justify-center items-center py-16' >
                 <h1 className='text-white text-4xl font-semibold tracking-wider'>Beneficios</h1>
             </div>
             <FeaturesSectionDemo />
