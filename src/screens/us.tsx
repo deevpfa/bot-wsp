@@ -41,7 +41,7 @@ export default function Us() {
         },
     ];
     return (
-        <div className="relative z-20 py-10 px-2 max-w-7xl mx-auto" id='us'>
+        <div className="relative z-20 py-10 px-2 max-w-7xl 2xl:max-w-[100rem] mx-auto" id='us'>
             <div className="px-8">
                 <h4 className="text-4xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center font-semibold text-white">
                     Nosotros
@@ -62,7 +62,7 @@ export default function Us() {
                     ease: "easeInOut",
                 }}
                 className="relative ">
-                <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md border-colors-neutral-600 gap-20 lg:gap-0 h-[2000px] md:h-[1000px]">
+                <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 2xl:border rounded-md border-colors-neutral-600 gap-20 lg:gap-0 h-[2000px] md:h-[1000px]">
                     {features.map((feature) => (
                         <FeatureCard key={feature.title} className={feature.className}>
                             <FeatureTitle>{feature.title}</FeatureTitle>

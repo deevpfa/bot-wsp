@@ -30,7 +30,7 @@ export function ContactForm({ }: ContactFormProps) {
                     <div
                         className="w-full md:w-1/2 px-2 lg:px-12">
 
-                        <form action="#" className="relative px-8 md:px-16 shadow-xl    xl:px-8 py-12 max-w-2xl mx-auto bg-white bg-opacity-5 w-full rounded-3xl">
+                        <form action="#" className="relative px-8 md:px-16 shadow-xl    2xl:px-8 py-12 max-w-2xl mx-auto bg-white bg-opacity-5 w-full rounded-3xl">
                             <div className="flex flex-wrap -m-2.5 mb-4">
                                 <div className="w-full md:w-1/2 p-2.5">
                                     <label htmlFor="contact-input-01-1" className="mb-2 inline-block text-sm text-white font-medium">Nombre</label>

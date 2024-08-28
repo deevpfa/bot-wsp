@@ -78,7 +78,7 @@ export default function Footer() {
     return (
         <footer className="-mt-12 lg:-mt-32">
             <Image src="/images/LogoSinFondo.png" alt="" width={500} className="mx-auto h-64 w-64 lg:h-96 lg:w-96" height={600} />
-            <div className="mx-auto max-w-7xl overflow-hidden px-6  lg:px-8">
+            <div className="mx-auto max-w-7xl 2xl:max-w-[100rem] overflow-hidden px-6  lg:px-8">
                 {/* <nav aria-label="Footer" className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12">
                     {navigation.main.map((item) => (
                         <div key={item.name} className="pb-6">

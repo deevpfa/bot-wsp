@@ -14,31 +14,26 @@ delete colors["blueGray"];
 
 const AddColors = {
 	primary: {
-		50: "#ff788e",
-		100: "#ff5e7a",
-		200: "#ff445f",
-		300: "#ff2a45",
-		400: "#ff102b",
-		// default
-		500: "#837250",
-		600: "#c60e3a",
-		700: "#a10d3f",
-		800: "#7d0b45",
-		900: "#59094b",
+		100: "#FAD9D4",
+		200: "#F7B3AC",
+		300: "#F48C83",
+		400: "#F1655B",
+		500: "#EA6857",
+		600: "#C3574A",
+		700: "#9C453D",
+		800: "#75342F",
+		900: "#4E231E"
 	},
 	secondary: {
-		50: "#58595F",
-		100: "#4B4D54",
-		200: "#3E4049",
-		300: "#31333E",
-		400: "#242733",
-		// default
-		500: "#171a28",
-		600: "#1c2833",
-		700: "#1a1a26",
-		800: "#181319",
-		900: "#16160c",
-		1000: "#1f1d1d"
+		100: "#FFFFFF",
+		200: "#FBFAFA",
+		300: "#F7F5F5",
+		400: "#F2F0F0",
+		500: "#E6E4E4",
+		600: "#B8B6B6",
+		700: "#8A8888",
+		800: "#5C5A5A",
+		900: "#2E2D2D"
 	},
 };
 module.exports = withMT({
@@ -52,6 +47,22 @@ module.exports = withMT({
 		animation: {
 			scroll:
 				"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+		},
+		screens: {
+			'sm': '640px',
+			// => @media (min-width: 640px) { ... }
+
+			'md': '768px',
+			// => @media (min-width: 768px) { ... }
+
+			'lg': '1024px',
+			// => @media (min-width: 1024px) { ... }
+
+			'xl': '1280px',
+			// => @media (min-width: 1280px) { ... }
+
+			'2xl': '1536px',
+			// => @media (min-width: 1536px) { ... }
 		},
 		keyframes: {
 			scroll: {
