@@ -76,7 +76,7 @@ export function Main({ }: MainProps) {
         // </div>
         <section className="relative overflow-hidden lg:mb-32"><div className="">
             <div className="container mx-auto">
-                <nav className="flex justify-between p-6 px-4 border-b border-white border-opacity-10"><div className="flex justify-between items-center w-full">
+                <nav className="flex justify-between p-6 px-4 lg:border-b border-white border-opacity-10"><div className="flex justify-between items-center w-full">
                     <div className="w-1/2 md:w-1/3">
                         <Image className="h-24 w-24 scale-150" src={logo} width={500} height={500} alt="" />
                     </div>
@@ -116,7 +116,7 @@ export function Main({ }: MainProps) {
                 </div>
             </div>
         </div>
-            <svg className="absolute inset-x-0 top-0 -z-10  w-full h-full stroke-white opacity-10 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true"><defs><pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width={200} height={200} x="50%" y={-1} patternUnits="userSpaceOnUse"><path d="M.5 200V.5H200" fill="none" /></pattern></defs><rect width="100%" height="100%" strokeWidth={0} fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" /></svg><div className="py-12">
+            <svg className="absolute inset-x-0 top-0 -z-10  w-full h-full stroke-white opacity-10 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true"><defs><pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width={200} height={200} x="50%" y={-1} patternUnits="userSpaceOnUse"><path d="M.5 200V.5H200" fill="none" /></pattern></defs><rect width="100%" height="100%" strokeWidth={0} fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" /></svg><div className="lg:py-12">
                 <div className="container px-4 mx-auto">
                     <div className="flex flex-wrap md:items-center -mx-4">
                         <div className="w-full md:w-1/2 px-4 mb-16 md:mb-0">

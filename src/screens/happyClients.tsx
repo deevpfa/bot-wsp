@@ -31,16 +31,20 @@ interface HappyClientsProps { }
 export function HappyClients({ }: HappyClientsProps) {
     return (
         <>
-            <div className='py-16'>
-                <div className='flex justify-center items-center'>
-                    <div className="w-full lg:w-1/2 px-4 ">
-                        <div className="md:max-w-lg">
-                            <span className="inline-block  mb-4 text-xs leading-5 uppercase rounded-full shadow-sm bg-primary-600 text-white px-3 py-1 font-bold">Clientes Felices</span>
-                            <h3 className="lg:mb-8 text-4xl text-white font-bold tracking-tighter">La satisfacción
-                                de nuestros clientes es nuestra prioridad</h3></div>
-                    </div>
-
+            <div className='py-16 relative'>
+                <div className="md:max-w-4xl mx-auto mb-16 md:mb-20 text-center">
+                    <span className="inline-block mb-4 text-xs leading-5 uppercase rounded-full shadow-sm bg-primary-600 text-white px-3 py-1 font-bold">Clientes Felices</span>
+                    <h1 className="mb-4 text-3xl md:text-4xl leading-tight text-white font-bold tracking-tighter">La satisfacción de nuestros clientes es nuestra prioridad</h1>
+                    <p className="text-lg md:text-xl font-medium text-coolGray-300">
+                        Nuestros clientes son nuestra prioridad, por eso trabajamos día a día para brindarles la mejor experiencia y soluciones a sus problemas.</p>
                 </div>
+                {/* <div className="container px-4 mx-auto">
+                    <div className="flex flex-wrap justify-center items-center mx-auto px-4">
+                        <span className="inline-block  mb-4 text-xs leading-5 uppercase rounded-full shadow-sm bg-primary-600 text-white px-3 py-1 font-bold">Clientes Felices</span>
+                        <h3 className="md:max-w-lg max-w-xs lg:mb-8 text-4xl text-white font-bold tracking-tighter">La satisfacción
+                            de nuestros clientes es nuestra prioridad</h3></div>
+
+                </div> */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -64,7 +68,7 @@ export function HappyClients({ }: HappyClientsProps) {
                         speed="normal"
                     />
                 </motion.div>
-            </div>
+            </div >
             <section className="lg:py-20  relative ">
                 {/* <div className="absolute overflow-hidden top-0 left-0 shape-svg w-full">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path className="shape-fill-blue" d="M0,6V0h1000v100L0,6z" /></svg></div> */}
