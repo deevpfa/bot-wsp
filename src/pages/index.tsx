@@ -6,11 +6,13 @@ import { Header } from '@/containers/header'
 import { Main } from '@/screens/main'
 import { HappyClients } from '@/screens/happyClients'
 import { Benefits } from '@/screens/benefits'
-import { ContactForm } from '@/screens/contactForm'
+import { Contact } from '@/screens/contactForm'
 import Footer from '@/containers/footer'
 import Chat from '@/components/Chat'
 import { WhatsappIcon } from '@/components/icons/whatsapp-icon'
 import Us from '@/screens/us'
+import { Us2 } from '@/screens/us2'
+import { How } from '@/screens/how'
 
 
 
@@ -19,25 +21,28 @@ import Us from '@/screens/us'
 export default function Home() {
   const [chatOpen, setChatOpen] = React.useState(false);
   return (
-    <div className='relative wavePatternBg bg-secondary-darken pb-12'>
+    <div className='relative  bg-secondary-darken pb-12'>
       {/* <div className='relative bg-secondary-darken pb-12'> */}
-      <Chat />
+      {/* <Chat /> */}
 
       <div className='md:px-16 z-10 relative flex flex-col'>
-        <section className="relative  bg-cover lg:bg-contain overflow-hidden">
-          <Header />
-          <Main />
-        </section >
-        <Image alt='' className='w-screen -mt-12 lg:-mt-24' src={globeUp} width={500} height={600} />
-        {/* BENEFICIOS */}
-        <Benefits />
+        {/* <section className="relative   overflow-hidden"> */}
+        {/* <Header /> */}
+        <Main />
+        {/* </section > */}
+        {/* <Image alt='' className='w-screen -mt-12 lg:-mt-24' src={globeUp} width={500} height={600} /> */}
         {/* NOSOTROS */}
-        <Us />
+        <Us2 />
+        {/* BENEFICIOS */}
+        {/* <Benefits /> */}
+        {/* NOSOTROS */}
+        {/* <Us /> */}
         {/* Clientes felices */}
         <HappyClients />
-        <Image alt='' className='w-screen ' src={globeDown} width={500} height={600} />
+        <How />
+        {/* <Image alt='' className='w-screen ' src={globeDown} width={500} height={600} /> */}
         {/* Formulario */}
-        {/* <ContactForm /> */}
+        <Contact />
 
 
         {/* Footer */}

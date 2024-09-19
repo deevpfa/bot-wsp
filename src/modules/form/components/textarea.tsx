@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { FormStatus, InputControl, MaskFn, ParseFn, ValidatorError, ValidatorFn } from "../interfaces";
 import { useInput } from "../hooks/use-input";
 import { classNames } from "@/functions/classNames";
-import { Kick } from "@/interfaces";
 
-export interface TextFieldProps extends React.ComponentProps<"input"> {
+export interface TextareaProps extends React.ComponentProps<"textarea"> {
     name: string;
 
     control?: InputControl;
@@ -40,7 +39,7 @@ export interface TextFieldProps extends React.ComponentProps<"input"> {
     isLoading?: boolean;
 }
 
-export function TextField({
+export function Textarea({
     name,
     control,
     value,
@@ -48,23 +47,18 @@ export function TextField({
     mask,
     parse,
     disabled,
-    hasFeedback,
-    infoTip,
-    errorTip,
-    before,
-    after,
-    leading,
-    trailing,
-    onChangeValue,
     onChange,
     onBlur,
+    onChangeValue,
     onChangeStatus,
     onInputError,
-    className,
-    isLoading,
+    hasFeedback,
+    errorTip,
+    infoTip,
     label,
+    className,
     ...restProps
-}: TextFieldProps) {
+}: TextareaProps) {
     const input = useInput({ name, control, value, validators, mask, parse, disabled });
 
     useEffect(() => {
@@ -79,7 +73,7 @@ export function TextField({
         if (onInputError) onInputError(input.error, input);
     }, [input.error]);
 
-    function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    function handleChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
         const { value } = event.currentTarget;
 
         input.setValue(value);
@@ -89,7 +83,7 @@ export function TextField({
         if (onChange) onChange(event);
     }
 
-    function handleBlur(event: React.FocusEvent<HTMLInputElement>) {
+    function handleBlur(event: React.FocusEvent<HTMLTextAreaElement>) {
         if (!input.isTouched) input.markAsTouched();
 
         if (onBlur) onBlur(event);
@@ -99,10 +93,9 @@ export function TextField({
         <fieldset className={classNames("mb-4", className)}>
             <label className='block mb-1'>
                 <span className='text-sm font-medium mb-2 block'>{label}</span>
-                <input
-                    type='text'
+                <textarea
                     className={classNames(
-                        "w-full rounded-full p-4 outline-none border border-gray-100 shadow placeholder-gray-500 focus:ring-2 focus:ring-orange-200 transition duration-200",
+                        "resize-none w-full rounded-3xl p-4 outline-none border border-gray-100 placeholder-gray-500 focus:ring focus:ring-orange-200 transition duration-200",
                         {
                             "ring-2 ring-red-500 focus:!ring-red-500":
                                 hasFeedback && input.error && (input.isDirty || input.isTouched),
@@ -117,15 +110,15 @@ export function TextField({
             </label>
             {hasFeedback && input.error && (input.isDirty || input.isTouched)
                 ? errorTip && (
-                      <div className='text-xs text-red-500'>
-                          {typeof errorTip === "function" ? errorTip(input.error) : errorTip}
-                      </div>
-                  )
+                    <div className='-mt-1 text-xs text-red-500'>
+                        {typeof errorTip === "function" ? errorTip(input.error) : errorTip}
+                    </div>
+                )
                 : infoTip && (
-                      <div className='text-xs text-gray-500'>
-                          {typeof infoTip === "function" ? infoTip(input.value) : infoTip}
-                      </div>
-                  )}
+                    <div className='-mt-1 text-xs text-gray-500'>
+                        {typeof infoTip === "function" ? infoTip(input.value) : infoTip}
+                    </div>
+                )}
         </fieldset>
     );
 }

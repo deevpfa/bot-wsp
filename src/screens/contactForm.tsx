@@ -1,62 +1,143 @@
-import { BackgroundBeams } from "@/components/BgBeams";
-import { Meteors } from "@/components/Meteors";
-import { motion } from "framer-motion";
-import React from "react";
 
-interface ContactFormProps { }
+// import { ContactBody } from "@/interfaces/api/contact.interface";
+// import { Form, SelectField, Textarea, TextField, useForm, Validators } from "@/modules/form";
+// import { contact } from "@/services";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Form, SelectField, TextField, useForm, Validators } from "@/modules/form";
+import { Textarea } from "@/modules/form/components/textarea";
 
-export function ContactForm({ }: ContactFormProps) {
+const variants = {
+    hidden: { y: 200, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+};
+
+interface ContactProps { }
+
+export function Contact({ }: ContactProps) {
+    const containerRef = useRef(null);
+    const isView = useInView(containerRef, { once: true });
+
+    const [isLoading, setIsLoading] = React.useState(false);
+
+    const fContact = useForm<any>({
+        firstName: { value: "", validators: [Validators.required] },
+        lastName: { value: "", validators: [Validators.required] },
+        email: { value: "", validators: [Validators.required, Validators.email] },
+        message: { value: "", validators: [Validators.required] },
+    });
+
+    function handleSubmit() {
+        if (fContact.isInvalid) return;
+        // onLoading(async () => {
+        //     try {
+        //         await contact(fContact.values);
+        //     } catch (error) {
+        //         console.error("Error sending contact", error);
+        //     }
+        // });
+    }
+
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-                delay: 0.2,
-                duration: 0.5,
-                ease: "easeInOut",
-            }}
-            exit={{ opacity: 1, y: 0 }}
-            id="form" className="relative"
-        >
-            <div className="mx-auto">
-                <div className="flex flex-wrap ">
-                    <div
-                        className="w-full md:w-1/2 lg:p-8">
-                        <div className="pt-18 ">
-                            <h2 className="mb-9 font-heading  text-4xl md:text-4xl font-bold text-white">Déjanos tus datos y empieza a automatizar tus conversaciones.</h2>
-                            <p className="text-2xl text-white font-light leading-normal ">Uno de nuestros asesores se comunicara contigo a la brevedad!</p>
+        <section ref={containerRef} className="mb-12" id="contact">
+            <div className=''>
+                <motion.div
+                    initial='hidden'
+                    animate={isView ? "visible" : "hidden"}
+                    variants={variants}
+                    transition={{ duration: 0.8 }}
+                    className='overflow-hidden pb-72'
+                >
+                    <div className='container px-4 mx-auto'>
+                        <div className='pb-10 max-w-3xl mx-auto text-center relative z-10'>
+                            <h1 className='mb-4 text-3xl lg:text-5xl font-bold text-white'>Contacto</h1>
+                            <p className='text-xl text-gray-200 mb-12'>
+                                Dejanos tu consulta y nuestro equipo se comunicará a la brevedad.
+                            </p>
                         </div>
                     </div>
-                    <div
-                        className="w-full md:w-1/2 px-2 lg:px-12">
+                </motion.div>
+            </div>
+            <motion.div
+                initial='hidden'
+                animate={isView ? "visible" : "hidden"}
+                variants={variants}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className='relative z-10'
+            >
+                <div className='container px-4 mx-auto'>
+                    <div className='py-20 max-w-3xl mx-auto -mt-96'>
+                        <Form group={fContact} onSubmit={handleSubmit}>
+                            <div className='p-8 rounded-3xl border border-gray-100 bg-white max-w-xl mx-auto'>
+                                <div className='flex flex-wrap -mx-4'>
+                                    <TextField
+                                        name='firstName'
+                                        label='Nombre'
+                                        placeholder='Nombre'
+                                        className='w-full lg:w-1/2 px-4'
+                                        hasFeedback
+                                        errorTip={(error: any) => {
+                                            if (!error) return null;
+                                            if (error.required) return "El nombre es requerido";
+                                        }}
+                                    />
+                                    <TextField
+                                        name='lastName'
+                                        label='Apellido'
+                                        placeholder='Apellido'
+                                        className='w-full lg:w-1/2 px-4'
+                                        hasFeedback
+                                        errorTip={(error: any) => {
+                                            if (!error) return null;
+                                            if (error.required) return "El apellido es requerido";
+                                        }}
+                                    />
+                                </div>
 
-                        <form action="#" className="relative px-8 md:px-16 shadow-xl    2xl:px-8 py-12 max-w-2xl mx-auto bg-white bg-opacity-5 w-full rounded-3xl">
-                            <div className="flex flex-wrap -m-2.5 mb-4">
-                                <div className="w-full md:w-1/2 p-2.5">
-                                    <label htmlFor="contact-input-01-1" className="mb-2 inline-block text-sm text-white font-medium">Nombre</label>
-                                    <input id="contact-input-01-1" type="text" placeholder="Nombre" className="w-full bg-transparent px-6 h-14 font-semibold text-white placeholder-white outline-none focus:border-white border border-white focus:ring focus:ring-blue-200 rounded-full transition duration-200" />
-                                </div>
-                                <div className="w-full md:w-1/2 p-2.5">
-                                    <label htmlFor="contact-input-01-2" className="mb-2 inline-block text-sm text-white font-medium">Empresa</label>
-                                    <input id="contact-input-01-2" type="text" placeholder="Empresa" className="w-full bg-transparent px-6 h-14 font-semibold text-white placeholder-white outline-none focus:border-white border border-white focus:ring focus:ring-blue-200 rounded-full transition duration-200" />
-                                </div>
+                                <TextField
+                                    name='email'
+                                    label='Email'
+                                    placeholder='john@email.com'
+                                    hasFeedback
+                                    errorTip={(error: any) => {
+                                        if (!error) return null;
+                                        if (error.required) return "El email es requerido";
+                                        if (error.email) return "El email no es válido";
+                                    }}
+                                />
+
+                                <Textarea
+                                    name='message'
+                                    label='Mensaje'
+                                    placeholder='Ingresa tu mensaje'
+                                    rows={5}
+                                    hasFeedback
+                                    infoTip='Por favor, facilítenos tantos detalles como sea posible.'
+                                    errorTip={(error: any) => {
+                                        if (!error) return null;
+                                        if (error.required) return "El mensaje es requerido";
+                                    }}
+                                />
+
+                                <button
+                                    className='py-4 px-6 rounded-full w-full h-14 inline-flex items-center justify-center text-center mb-8 bg-primary-500 border border-primary-600 font-bold font-heading text-white hover:bg-orange-600 focus:ring focus:ring-orange-200 transition duration-200'
+                                    type='submit'
+                                    disabled={fContact.isInvalid || isLoading}
+                                >
+                                    {!isLoading ? "Enviar" : "Enviando..."}
+                                </button>
+
+                                <p className='text-gray-500 text-sm'>
+                                    Procesamos su información de acuerdo con nuestra{" "}
+                                    <a href='#' className='text-primary-500 text-sm font-semibold'>
+                                        Política de privacidad
+                                    </a>
+                                </p>
                             </div>
-                            <div className="flex flex-wrap -m-3 mb-11">
-                                <div className="w-full p-3">
-                                    <label htmlFor="contact-input-01-3" className="mb-2 inline-block text-sm text-white font-medium">Email</label>
-                                    <input id="contact-input-01-3" type="text" placeholder="Email" className="w-full bg-transparent px-6 h-14 font-semibold text-white placeholder-white outline-none focus:border-white border border-white focus:ring focus:ring-blue-200 rounded-full transition duration-200" />
-                                </div>
-                                <div className="w-full p-3">
-                                    <label htmlFor="contact-textarea-01-1" className="mb-2 inline-block text-sm text-white font-medium">Mensaje</label>
-                                    <textarea id="contact-textarea-01-1" placeholder="Mensaje" className="w-full bg-transparent p-6 h-28 overflow-hidden font-semibold text-white placeholder-white outline-none focus:border-white border border-white focus:ring focus:ring-blue-200 rounded-3xl resize-none transition duration-200" defaultValue={""} />
-                                </div>
-                            </div>
-                            <button type="submit" className="inline-flex justify-center items-center text-center h-14 py-6 px-10 font-semibold text-white hover:text-white focus:text-white bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 rounded-full focus:ring-4 focus:ring-blue-200 transition duration-200">Enviar Mensaje</button>
-                        </form>
+                        </Form>
                     </div>
                 </div>
-            </div>
-            {/* <img className="absolute inset-0 w-full h-full object-cover select-none" src="fily-assets/gradients/gradient-contact.jpg" alt="" /> */}
-        </motion.div>
+            </motion.div>
+        </section>
     );
 }
